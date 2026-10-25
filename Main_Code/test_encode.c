@@ -17,7 +17,16 @@ int main(int argc, char *argv[])
         return 0;
     }
     // all set to perform encoding
-    ret = do_encoding(&encInfo);
+    int result = do_encoding(&encInfo);
+    
+    if(result == e_success)
+    {
+        printf("encoding successful\n");
+    }
+    else
+    {
+        printf("encoding failed\n");
+    }
 
   }
   else if(operation == e_decode)
